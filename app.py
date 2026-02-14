@@ -15,6 +15,13 @@ from langchain_community.vectorstores import FAISS, Chroma
 from langchain_core.runnables import RunnablePassthrough, RunnableSequence, RunnableLambda
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
+import streamlit as st
+
+st.markdown("""
+<style>
+section[data-testid="stSidebar"] {display: none !important;}
+</style>
+""", unsafe_allow_html=True)
 
 
 # -----------------------------
