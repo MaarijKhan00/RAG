@@ -189,7 +189,7 @@ if uploaded:
         st.success(f"Vector DB ready ({db_type}) at {persist_dir}")
 
     st.subheader("2) Ask a question")
-    q = st.text_input("Your question", placeholder="e.g., What is the attendance policy?")
+    q = st.text_input("Your question", placeholder="e.g., Summaries the above documment.")
     if st.button("Answer") and q.strip():
         with st.spinner("Retrieving context and generating answer..."):
             answer = st.session_state.rag_chain.invoke(q)
